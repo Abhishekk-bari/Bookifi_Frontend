@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+@font-face {
+  font-family: 'MountainHandmade';
+  src: url('./fonts/Mountain Handmade.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SummerCharming';
+  src: url('./fonts/Summer Charming.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Add this to your global styles */
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+  }
+  
