@@ -14,6 +14,24 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'ApothemCapsRegular';
+  src: url('./fonts/ApothemCaps-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CHRISTMASCOMEBACK';
+  src: url('./fonts/CHRISTMAS COMEBACK.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkforceScalePERSONALUSEONLY';
+  src: url('./fonts/WorkforceScale_PERSONAL_USE_ONLY.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Add this to your global styles */
 .no-scrollbar::-webkit-scrollbar {
