@@ -12,7 +12,7 @@ function BookingPage() {
     name: "",
     email: "",
     phone: "",
-    appointmentDate: null, // For date selection
+    appointmentDate: null,
   });
 
   // Handle input changes
@@ -39,6 +39,10 @@ function BookingPage() {
     try {
       const response = await axios.post('http://localhost:5000/submit-form', formData);
       notify(response.data.message); // Show success toast
+      
+      const audio = new Audio('/public/emergence-ringtone.mp3'); // Adjust path as necessary
+      audio.play();
+      
       setFormData({
         name: "",
         email: "",
