@@ -4,6 +4,7 @@ import img1 from "../assets/work2.jpg";
 import img2 from "../assets/work3.jpg";
 import img3 from "../assets/work4.jpg";
 import img4 from "../assets/work5.jpg";
+import About from "./About";
 
 function Home() {
   const sliderRef = useRef(null);
@@ -27,7 +28,7 @@ function Home() {
           slider.scrollLeft = 0;
         }
         slider.scrollBy({ left: 1, behavior: "smooth" }); // Smooth scroll by 1px
-      }, 10); // Adjust speed by changing interval time
+      }, 0); // Adjust speed by changing interval time
     }
 
     return () => {
@@ -58,7 +59,7 @@ function Home() {
         ref={sliderRef}
         className="flex flex-row gap-4 overflow-x-hidden scroll-smooth whitespace-nowrap w-[100vw] h-[30vw] no-scrollbar"
       >
-        <div className="bg-gray-100 rounded-xl p-6 flex-shrink-0 min-w-[300px]">
+        <div className="bg-transparent rounded-xl p-6 flex-shrink-0 min-w-[300px]">
           <img
             src={img1}
             alt="Photography 1"
@@ -87,6 +88,7 @@ function Home() {
           />
         </div>
       </div>
+      <About />
     </div>
   );
 }
