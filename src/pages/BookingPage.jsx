@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { DateCalendar, LocalizationProvider } from "@mui/x-date-pickers";
+import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import axios from 'axios';
@@ -40,7 +40,7 @@ function BookingPage() {
       const response = await axios.post('http://localhost:5000/submit-form', formData);
       notify(response.data.message); // Show success toast
       
-      const audio = new Audio('/public/emergence-ringtone.mp3'); // Adjust path as necessary
+      const audio = new Audio('/public/emergence-ringtone.mp3'); 
       audio.play();
       
       setFormData({
@@ -55,9 +55,16 @@ function BookingPage() {
   };
 
   return (
-    <div className="flex flex-row justify-center w-screen h-screen pt-48">
-      <div className="text_container pl-10 w-1/2">
-        <h1 className="text-8xl pb-10 font-['SummerCharming'] text-blue-500">
+    <>
+    <div className="text-center text-yellow-300 font-[WorkforceScalePERSONALUSEONLY] text-9xl pt-20">
+      <marquee behavior="scroll" direction="left" scrollamount="5" >
+        Book Now  Book Now  Book Now Book Now Book Now Book Now Book Now Book Now Book Now 
+      </marquee>
+    </div>
+    <div className="flex flex-row justify-center w-screen h-screen pt-5"> 
+    
+      <div className="text_container pl-10 w-1/2 ">
+        <h1 className="text-8xl font-['SummerCharming'] text-blue-600">
           Book
         </h1>
         <p className="font-['CHRISTMASCOMEBACK'] text-6xl pb-2">
@@ -66,10 +73,15 @@ function BookingPage() {
         <p className="text-lg">
           Booking your photography session is just a few clicks away!
         </p>
+        <p className="pt-20 ">
+        <span className="pr-5">Address:</span>
+        Swiss Chalets Headquarters,Alpine Street 123, Zermatt, Switzerland
+        </p>
       </div>
 
-      <div className="form_container pr-40 ">
-        <form className="border border-gray-500 p-10 rounded-lg shadow-lg w-80" onSubmit={handleSubmit}>
+      <div className="form_container pr-40">
+
+        <form className="bg-[#f3f3ff] p-10 rounded-lg shadow-lg w-80" onSubmit={handleSubmit}>
           <label className="block mb-2 font-semibold">Name:</label>
           <input
             type="text"
@@ -117,15 +129,18 @@ function BookingPage() {
 
           <button
             type="submit"
-            className="mt-4 bg-black text-white font-bold py-2 px-4 rounded hover:bg-blue-600"
+            className="mt-4 bg-purple-300 text-gray-800 font-bold py-2 px-4 rounded hover:bg-blue-100"
           >
             Submit
           </button>
         </form>
         
         <Toaster />
+        
       </div>
     </div>
+    
+    </>
   );
 }
 
